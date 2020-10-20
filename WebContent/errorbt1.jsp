@@ -7,13 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<form action="servletbt1">
-	<label>	Quantity:</label>
-	<input type="text" id="number" name="number">
-		<button type="submit">
-			PURCHASE
-		</button>
-	</form>
+	<p> please type a number so that we could known do you actually want to purchase or not</p>
+	<p>Press back button to come back</p>
+	<form action="BT1.jsp">
+    		<button type="submit">Back</button>
+		</form>
 </body>
 </html>

@@ -8,8 +8,8 @@
 </head>
 <body>
 	<h4>Widget Order Form</h4>
-	<form action="BT22.jsp">
-	<table cellspacing="5">
+	<form action="Servletbt2">
+	<table >
     <tr>
       <td align="right">Number to purchase:</td>
       <td><input type="text" name="NumberOfProduct"></td>

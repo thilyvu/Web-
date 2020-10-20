@@ -7,13 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<form action="servletbt1">
-	<label>	Quantity:</label>
-	<input type="text" id="number" name="number">
-		<button type="submit">
-			PURCHASE
-		</button>
-	</form>
+	<p> To enter another email address, click on the Back button in your browser or the Return button shown below</p>
+		<form action="BT4.jsp">
+    		<button type="submit">Back</button>
+		</form>
 </body>
 </html>

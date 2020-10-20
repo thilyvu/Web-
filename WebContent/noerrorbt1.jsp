@@ -7,13 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<form action="servletbt1">
-	<label>	Quantity:</label>
-	<input type="text" id="number" name="number">
-		<button type="submit">
-			PURCHASE
-		</button>
-	</form>
+	<p>Thank you for your order of <%=request.getParameter("number")   %>  widgets!</p>
 </body>
 </html>

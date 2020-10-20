@@ -7,13 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<form action="servletbt1">
-	<label>	Quantity:</label>
-	<input type="text" id="number" name="number">
-		<button type="submit">
-			PURCHASE
-		</button>
-	</form>
+<h4>Error Input</h4>
+		<p> You must provide a name or email please chose this link to try <a href="BT2.jsp"> Link</a>gain</p>
 </body>
 </html>
