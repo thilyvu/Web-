@@ -8,7 +8,7 @@
 </head>
 <body>
 	<p> To enter another email address, click on the Back button in your browser or the Return button shown below</p>
-		<form action="BT4.jsp">
+		<form action="BT5.html">
     		<button type="submit">Back</button>
 		</form>
 </body>

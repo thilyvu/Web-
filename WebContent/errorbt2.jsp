@@ -8,6 +8,6 @@
 </head>
 <body>
 <h4>Error Input</h4>
-		<p> You must provide a name or email please chose this link to try <a href="BT2.jsp"> Link</a> gain</p>
+		<p> You must provide a name or email please chose this link to try <a href="BT2.jsp"> Link</a> again</p>
 </body>
 </html>
