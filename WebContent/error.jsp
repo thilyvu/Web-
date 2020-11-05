@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p> To enter another email address, click on the Back button in your browser or the Return button shown below</p>
+	<p> You need to fill all the textbox, click on the Back button below to try again</p>
 		<form action="BT5.html">
     		<button type="submit">Back</button>
 		</form>

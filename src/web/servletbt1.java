@@ -29,9 +29,27 @@ public class servletbt1 extends HttpServlet {
 		}
 		else
 		{
-			url = "/noerrorbt1.jsp";
-			RequestDispatcher dispatcherObject= getServletContext().getRequestDispatcher(url);
-			dispatcherObject.forward(request, response);
+			int quantitynumber=0;
+			try {
+				quantitynumber=Integer.parseInt(quantity);
+				if(quantitynumber>0)
+				{
+					url="/noerrorbt1.jsp";
+					RequestDispatcher dispatcherObject= getServletContext().getRequestDispatcher(url);
+					dispatcherObject.forward(request, response);
+				}
+				else {
+					url="/errorbt1.jsp";
+					RequestDispatcher dispatcherObject= getServletContext().getRequestDispatcher(url);
+					dispatcherObject.forward(request, response);
+				}
+			}
+			catch(NumberFormatException ex)
+			{
+				url="/errorbt1.jsp";
+				RequestDispatcher dispatcherObject= getServletContext().getRequestDispatcher(url);
+				dispatcherObject.forward(request, response);
+			}
 		}
 	}
     public servletbt1() {

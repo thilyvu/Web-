@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h4>Error Input</h4>
-		<p> You must provide name,email and number in integer please chose this link to try <a href="BT2.jsp"> Link</a> again</p>
+
 </body>
 </html>
