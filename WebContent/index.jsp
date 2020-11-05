@@ -7,9 +7,10 @@
 	<title>18110399</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
 	<link href="./style.css" rel="stylesheet" type="text/css">
+	
 </head>
-		<body>
-
+		<body style="background-image: url('https://cdn.pixabay.com/photo/2014/11/13/23/34/london-530055_1280.jpg'); background-size: 100%;">
+		
 		<table class="wholetable">
 		<tr> <td></td><td></td>
 		<td><h4 class="heading">Thi Lý Vũ</h4>
