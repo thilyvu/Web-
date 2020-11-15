@@ -21,6 +21,7 @@ table, th, td {
 			if(request.getParameter("mo")!=null) mo=request.getParameter("mo");
 			if(request.getParameterValues("equ")!=null) mang=request.getParameterValues("equ");
 	%>
+	<div style="width: fit-content;border-width: 0.2rem;border-style: double; padding: 0.5em;">
 	<table>
 		<tr> 
 			<th>Processor </th>
@@ -46,5 +47,6 @@ table, th, td {
 	<br>
 	<button>Back</button>
 	</form>
+	</div>
 </body>
 </html>

@@ -10,19 +10,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 </head>
 <body>
+<div style="width: fit-content;border-width: 0.2rem;border-style: double; padding: 0.5em;">
 	<h4>Widget Order Form</h4>
 	<form action="Servletbt2">
 	<table >
     <tr>
       <td align="right">Number to purchase:</td>
-      <td><input type="number" name="NumberOfProduct" required="required" value="<c:out value="${numberbackup}"></c:out>">
+      <td><input type="number" name="NumberOfProduct" required="required" placeholder="ex:1" value="<c:out value="${numberbackup}"></c:out>">
       				<c:if test="${number != null }">
 						<c:out value="${number}"></c:out>
 					</c:if>
 		</td>
     </tr><tr>
       <td align="right">Your name:</td>
-      <td> <input type="text" name="NameofCustomer" required="required" value="<c:out value="${name}"></c:out>"></td>
+      <td> <input type="text" name="NameofCustomer" placeholder="ex:Nguyen Van A" required="required" value="<c:out value="${name}"></c:out>"></td>
     </tr><tr>
       <td align="right">Your email:</td>
       <td> <input type="text" name="Email" placeholder="ex:thilyvu.2000@gmail.com"  value="<c:out value="${emailBackup}"></c:out>" required="required" >
@@ -36,5 +37,6 @@
     </tr>
   </table>
 	</form>
+</div>
 </body>
 </html>

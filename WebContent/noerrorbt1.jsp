@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div style="width: fit-content;border-width: 0.2rem;border-style: double; padding: 0.5em;">
 	<p>Thank you for your order of <c:out value="${quantity}"></c:out>  widgets!</p>
 	<form action="index.jsp">
 	<label>
@@ -18,5 +19,6 @@
 	<br>	
 	<button>Back</button>
 	</form>
+	</div>
 </body>
 </html>

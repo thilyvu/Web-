@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div style="width: fit-content;border-width: 0.2rem;border-style: double; padding: 0.5em;">
 	<h2>Congratulate you have successfully register this site !</h2>
 	<form action="index.jsp">
 	<label>Press this button to go back to home page</label>
@@ -14,6 +15,6 @@
 	Back
 	</button>
 	</form>
-	
+	</div>
 </body>
 </html>

@@ -11,6 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div style="width: fit-content;border-width: 0.2rem;border-style: double;padding: 0.5em;">
 	<h4>Order Confirmation</h4>
 	<p> Thanks you for your order of , <c:out value="${numberbackup}"></c:out>, <c:out value="${name}"></c:out> </p>
 	<p> At $9.95, your bill will be $<c:out value="${numberbackup*9.95}"></c:out></p>
@@ -22,5 +23,6 @@
 	<br>
 	<button>Back</button>
 	</form>
+	</div>
 </body>
 </html>

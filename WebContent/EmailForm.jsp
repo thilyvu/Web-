@@ -12,6 +12,7 @@
 
 </head>
 <body>
+<div style="width: fit-content;border-width: 0.2rem;border-style: double; padding: 0.5em;">
 	<form action="EmailValidate" method="post">
 		<%!boolean checkmang(String a, String[] b) {
 		for (String x : b) {
@@ -207,5 +208,6 @@
 
 
 	</form>
+	</div>
 </body>
 </html>
