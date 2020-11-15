@@ -20,6 +20,7 @@ public class servletbt1 extends HttpServlet {
 	protected void BT1(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
 		String url = "";  
 		String quantity = request.getParameter("number");
+		request.setAttribute("number",Integer.parseInt(quantity));
 		if(quantity.equals(""))
 		{
 			url="/errorbt1.jsp";
@@ -35,7 +36,9 @@ public class servletbt1 extends HttpServlet {
 				if(quantitynumber>0)
 				{
 					url="/noerrorbt1.jsp";
+					request.setAttribute("quantity",quantitynumber);
 					RequestDispatcher dispatcherObject= getServletContext().getRequestDispatcher(url);
+					
 					dispatcherObject.forward(request, response);
 				}
 				else {

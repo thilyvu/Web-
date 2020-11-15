@@ -32,7 +32,7 @@
 			<form action="BT2.jsp" class ="form2">
 
 			<br>
-				<label class="lb"> Assignment 2</label>
+				<label class="lb"> Assignment 2.1</label>
 				<br>
 			<button type="submit" class="btn">View</button>
 			</form>
@@ -42,22 +42,73 @@
 			<form action="BT3.html" class="form3">
 		
 			<br>
-				<label class="lb"> Assignment 3</label>
+				<label class="lb"> Assignment 2.2</label>
+				<br>
+			<button type="submit" class="btn">View</button>
+			</form>
+		</td>	
+		<td>
+			<form action="BT1.jsp" class="form3">
+		
+			<br>
+				<label class="lb"> Assignment 3.1</label>
 				<br>
 			<button type="submit" class="btn">View</button>
 			</form>
 		</td>
 		<td>
-			<form action="BT5.html" class ="form4">
+			<form action="BT2.jsp" class="form3">
 		
 			<br>
-				<label class="lb"> Assignment 4 </label>
+				<label class="lb"> Assignment 3.2</label>
+				<br>
+			<button type="submit" class="btn">View</button>
+			</form>
+		</td>
+		</tr>
+		</table>
+		<table class="wholetable">
+		<tr>
+		
+		<td>
+			<form action="BT3.html" class="form3">
+		
+			<br>
+				<label class="lb"> Assignment 3.3</label>
+				<br>
+			<button type="submit" class="btn">View</button>
+			</form>
+		</td>
+		<td>
+			<form action="BT1.jsp" class ="form4">
+		
+			<br>
+				<label class="lb"> Assignment 4.1 </label>
 				<br>
 			<button type="submit" class="btn">View</button>
 			<br>
 			</form>
 		</td>
+		<td>
+			<form action="BT42.jsp" class ="form4">
 		
+			<br>
+				<label class="lb"> Assignment 4.2 </label>
+				<br>
+			<button type="submit" class="btn">View</button>
+			<br>
+			</form>
+		</td>
+		<td>
+			<form action="BT3.html" class ="form4">
+		
+			<br>
+				<label class="lb"> Assignment 4.3 </label>
+				<br>
+			<button type="submit" class="btn">View</button>
+			<br>
+			</form>
+		</td>
 		<td>
 			<form action="EmailForm.jsp" class ="form5">
 			
@@ -69,8 +120,8 @@
 			</form>
 		
 		</td>
-
 		</tr>
+		
 		</table>
 		
 	

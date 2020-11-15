@@ -2,7 +2,7 @@
 
 .btn{
 	background-color: buttonface;
-	width: 220px;
+	width: 150px;
 	height: 50px;
 	font-size: 25px;
 }
@@ -13,7 +13,7 @@
 }
 .lb{
 	font-size: 25px;
-	width: 220px;
+	width: 150px;
 	height: 50px;
 	text-align:center;	
 	background-color: lightgray;
@@ -24,5 +24,5 @@
 }
 .wholetable{
 	position:relative;
-	left:200px;
+	left:150px;
 }

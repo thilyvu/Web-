@@ -1,6 +1,7 @@
 package web;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 
 @WebServlet("/EmailValidate")
@@ -34,27 +36,17 @@ public class EmailValidate extends HttpServlet {
 		String mang[]={};
 		
 		// condition for NumberOfProduct
-		if (NumberOfProduct.equals("")) {
+		int quanlity=Integer.parseInt(NumberOfProduct);
+		if (quanlity >=1)
 			
-			request.setAttribute("number", "You must type your number of products you want to purchase");
+		{
+			request.setAttribute("CU",quanlity);
 		}
 		else {
-			int quantitynumber=0;
-			try {
-				quantitynumber=Integer.parseInt(NumberOfProduct);
-				if(quantitynumber>0)
-				{
-				request.setAttribute("CustomerNumberBackUp",quantitynumber );
-				}
-				else {
-					request.setAttribute("number", "Your input should be integer");
-				}
-			}
-			catch(NumberFormatException ex)
-			{
-				request.setAttribute("number", "Your input should be integer");
-			}
+			request.setAttribute("number", "Your input should greater than 0");
 		}
+		
+
 		// condition for NameofCustomer 
 		request.setAttribute("NameBackUp",NameofCustomer);
 		
@@ -114,7 +106,7 @@ public class EmailValidate extends HttpServlet {
 
 		
 		/////CustomerNumberBackUp/////////
-		if(request.getAttribute("CustomerNumberBackUp")!=null 
+		if(request.getAttribute("CU")!=null 
 				&& request.getAttribute("NameBackUp")!=null 
 				&&request.getAttribute("emailBackup")!=null
 				&&request.getAttribute("phoneBackUp")!=null 

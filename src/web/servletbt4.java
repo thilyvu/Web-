@@ -1,4 +1,4 @@
-	package web;
+package web;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -11,16 +11,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/Servletbt2")
-public class Servletbt2 extends HttpServlet {
+/**
+ * Servlet implementation class servletbt4
+ */
+@WebServlet("/servletbt4")
+public class servletbt4 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-	protected void BT2(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
-		String url = "/BT2.jsp";  
+	protected void BT4(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+		String url = "/BT42.jsp";  
 		String NumberOfProduct = request.getParameter("NumberOfProduct");
 		String NameofCustomer = request.getParameter("NameofCustomer");
 		String Email = request.getParameter("Email");
@@ -31,9 +33,10 @@ public class Servletbt2 extends HttpServlet {
 		if(quantitynumber>=1)
 		{
 			request.setAttribute("numberbackup", quantitynumber);
+			url="/noerrorbt2.jsp";
 		}
 		else {
-			request.setAttribute("number", "your input numbers must greater than 0");
+			url="/errorbt2.jsp";
 		}
 		//conditions for name
 		request.setAttribute("name",NameofCustomer);
@@ -41,7 +44,7 @@ public class Servletbt2 extends HttpServlet {
 		Pattern EmailPattern =Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
 		Matcher MatcherEmail =EmailPattern.matcher(Email);
 		if(!MatcherEmail.matches()) {
-			request.setAttribute("email", "Your email is not true format please check it again");
+			url="/errorbt2.jsp";
 		}
 		else
 		{
@@ -57,9 +60,8 @@ public class Servletbt2 extends HttpServlet {
 		RequestDispatcher dispatcherObject= getServletContext().getRequestDispatcher(url);
 		dispatcherObject.forward(request, response);
 	}
-		
-		
-    public Servletbt2() {
+	
+    public servletbt4() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -69,7 +71,7 @@ public class Servletbt2 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		BT2( request, response);
+			BT4( request, response);
 	}
 
 	/**

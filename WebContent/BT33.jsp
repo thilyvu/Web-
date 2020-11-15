@@ -39,5 +39,12 @@ table, th, td {
 			 </td>
 		</tr>
 	</table>
+	<form action="index.jsp">
+	<label>
+	Press this button to go back to the home page
+	</label> 
+	<br>
+	<button>Back</button>
+	</form>
 </body>
 </html>

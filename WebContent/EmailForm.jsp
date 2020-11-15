@@ -1,11 +1,15 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 </head>
 <body>
 	<form action="EmailValidate" method="post">
@@ -19,85 +23,81 @@
 
 	}%>
 		<h4>Enter Your Information</h4>
-
 		<table>
 			<tr>
-				<td><label> Number to purchase: <br> (at least 1)
-				</label></td>
-				<td><input type="text" name="number" required="required"
-					value="<%if (request.getAttribute("CustomerNumberBackUp") != null) {
-	out.print(request.getAttribute("CustomerNumberBackUp"));
-}%>">
-					<%
-						Object a = request.getAttribute("number");
-					if (a != null) {
-						out.print(a);
-					}
-					%> * <br></td>
+				<td>
+				<label> Number to purchase: <br> (at least 1)
+				</label>
+				</td>
+				<td>
+				<input type="number" name="number"  placeholder="ex:1" required="required" value="<c:out value="${CU}"></c:out>">
+						
+					<c:set var="a" scope="request" value="${number }"></c:set>
+					<c:if test="${a != null }">
+						<c:out value="${a}"></c:out>
+					</c:if>
+			 <br></td>
+			 
 			</tr>
 			<tr>
-				<td><label> Your name: </label></td>
-				<td><input type="text" name="customerName" required="required"
-					value="<%if (request.getAttribute("NameBackUp") != null) {
-	out.print(request.getAttribute("NameBackUp"));
-}%>">
-
-
-					* <br></td>
+				<td>
+				<label> Your name: </label></td>
+				<td>
+				
+				<input type="text" name="customerName" placeholder="ex Thi Ly Vu" required="required" value="<c:out value="${NameBackUp}"></c:out>">
+					* 
+					<br></td>
 
 			</tr>
 			<tr>
 
-				<td><label> Your phone: <br> (in format
-						xxx-xxx-xxxx)
+				<td><label> Your phone: <br> (in format xxx-xxx-xxxx)
 				</label></td>
-				<td><input type="text" name="phone" required="required"
-					value="<%if (request.getAttribute("phoneBackUp") != null) {
-																				out.print(request.getAttribute("phoneBackUp"));
-																			}%>">
-					<%
-						Object b = request.getAttribute("phone");
-					if (b != null) {
-						out.print(b);
-					}
-					%> * <br></td>
+				<td><input type="number" placeholder="ex :0905254115" name="phone" required="required" 
+				value="<c:out value="${phoneBackUp}"></c:out>">
+					 * 
+					<c:set var="b" scope="request" value="${phone }"></c:set>
+					<c:if test="${b != null }">
+					<c:out value="${b }"></c:out>
+					</c:if>
+					
+					
+					<br></td>
 			</tr>
 			<tr>
 
 				<td><label> Your Email: </label></td>
-				<td><input type="text" name="email" required="required"
-					value="<%if (request.getAttribute("emailBackup") != null) {
-	out.print(request.getAttribute("emailBackup"));
-}%>">
-
-
-					<%
-						Object c = request.getAttribute("email");
-					if (c != null) {
-						out.print(c);
-					}
-					%> <label>(optional) </label> <br></td>
+				<td><input type="text" name="email" placeholder="ex:thilyvu.2000@gmail.com" required="required"
+					value="<c:out value="${emailBackup}"></c:out>">
+					<c:set var="c" scope="request" value="${email }"></c:set>
+					<c:if test="${c != null }">
+					<c:out value="${c }"></c:out>
+					</c:if>
+					
+		 <label>(optional) </label> <br></td>
 			</tr>
 
 		</table>
 		<table>
 			<tr>
 				<td></td>
-				<td><label> Number: </label> <input type="text"
-					name="expirationnumber" required="required"
-					value="<%if (request.getAttribute("CreditCardNumberBU") != null) {
-	out.print(request.getAttribute("CreditCardNumberBU"));
-}%>">
-
-					<%
-						Object d = request.getAttribute("CreditCardNumber");
-					if (d != null) {
-						out.print(d);
-					}
-					%> <br></td>
+				<td>
+				<label> Number: </label> 
+				
+				
+				<c:set var="CreditCard" scope="request"  value="${CreditCardNumberBU}"></c:set>
+				<input type="number" name="expirationnumber" required="required" placeholder="ex:4155279860457" value="<c:out value="${CreditCardNumberBU}"></c:out>">
+					
+					
+					<c:set var="d" scope="request" value="${CreditCardNumber }"></c:set>
+						<c:if test="${d != null }">
+					<c:out value="${d }"></c:out>
+					</c:if>
+					<br></td>
 			</tr>
 			<tr>
-				<td><label> Credit Information </label></td>
+				<td>
+				<label> Credit Information </label></td>
 				<td></td>
 			</tr>
 			<tr>
@@ -110,9 +110,9 @@
 
 						<option
 							<%if (request.getParameter("ExpirationDate") != null
-		&& Integer.parseInt(request.getParameter("ExpirationDate")) == date) {
-	out.print(" SELECTED");
-}%>>
+								&& Integer.parseInt(request.getParameter("ExpirationDate")) == date) {
+									out.print(" SELECTED");
+							}%>>
 
 							<%=date%>
 

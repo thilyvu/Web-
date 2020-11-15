@@ -7,10 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p> please type a number so that we could known do you actually want to purchase or not</p>
+	<p> please type a number,which is greater than 0, so that we could known do you actually want to purchase or not</p>
 	<p>Press back button to come back</p>
 	<form action="BT1.jsp">
+	<br>
     		<button type="submit">Back</button>
-		</form>
+	</form>
 </body>
 </html>
