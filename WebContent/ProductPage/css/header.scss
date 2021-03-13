@@ -1,0 +1,56 @@
+/*Sa header*/
+header {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  &.site-logo-bar{
+    display: block;
+    background-color: white;
+  }
+  .bar-columns{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+  }
+  .site-logo {
+    align-self: center;
+    display: block;
+    justify-self: center;
+    width: 200px;
+  }
+  .login-bar {
+    align-self: center;
+    justify-self: center;
+    & a{
+      text-decoration: none;
+      color: black;
+      &:hover{
+        color: var(--blue);
+      }
+    }
+  }
+  .user-icon{
+    width: 20px;
+  }
+  .menu{
+    background: var(--light-bg);
+    list-style-type: none;
+    text-align: center;
+    font-size: 17px;
+    & ul{
+      padding: 20px 0 20px 0;
+    }
+    & li{
+      display: inline-block;
+      width: 10%;
+    }
+    & a{
+      text-decoration: none;
+      color: var(--green);
+      &:hover{
+        color: var(--blue);
+      }
+    }
+  }
+  }
+  /*Sa header end*/

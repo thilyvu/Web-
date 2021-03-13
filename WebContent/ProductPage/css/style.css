@@ -1,0 +1,399 @@
+:root {
+  --light-bg: #FFFAE8;
+  --blue: #4A7D85;
+  --green: #4A573E;
+  --red: #822D12;
+  --light-text: #F2EDE6;
+}
+body {
+  font-family: 'Playfair Display', sans-serif;
+  color: #000;
+  width: 100vr;
+  padding: 0;
+  margin: 0;
+}
+/*sa*/
+:root{
+    --light-bg: #FFFAE8;
+    --blue: #4A7D85;
+    --green: #4A573E;
+    --red: #822D12;
+    --light-text: #F2EDE6;
+}
+html{
+  font-size: 18px;
+}
+body{
+  font-family: 'Playfair Display', sans-serif;
+  margin:0;
+  padding:0;
+}
+/*-----header-----*/
+.menu-bar{
+  position: absolute;
+  background: var(--light-bg);
+  display: grid;
+  grid-template-columns: 40% 20% 25% 8% 7%;
+  width: 90%;
+  top: 40px;
+  left: 4%;
+  right: 4%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  justify-self: center;
+  align-items: center;
+  font-size: 1rem;
+  box-shadow: 2px 2px 15px #8F8F8F;
+}
+.menu-bar a{
+  text-decoration: none;
+  color: var(--green);
+}
+.menu-bar a:hover{
+  color: var(--blue);
+}
+.menu ul{
+  list-style-type: none;
+}
+.menu li{
+  display: inline-block;
+  width: 20%;
+}
+.menu li a{
+  text-decoration: none;
+  color: var(--green);
+}
+.menu li a:hover{
+  color: var(--blue);
+}
+.current-page a{
+  color: var(--blue);
+}
+.site-logo{
+  justify-self: center;
+}
+.site-logo svg{
+  width: 50%;
+  padding-right: 27%;
+  padding-left: 27%;
+}
+.cart svg{
+  width: 25%;
+}
+/*-----header end-----*/
+/*sa end*/
+.navbar li {
+    display: inline;
+    padding-right: 2em;
+    font-size: large;
+  }
+
+.navbar{
+    background-color: white ;
+    display: flex;
+    border-bottom: black solid 1px;
+  
+
+    height: min-content;
+    flex-direction: row;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+}
+a :hover {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+.section_left li{
+    align-items: baseline;
+    padding-bottom: 0.5em;
+    border-bottom-style: groove;
+    border-bottom-width: 1px;
+    justify-content: left; 
+}
+
+
+
+.h1-left{
+    padding-bottom: 2em;
+}
+.filter{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.filter-item{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.detail li{
+
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+}
+
+li a{
+    color: black;
+    text-decoration: none;
+    
+}
+a:hover{
+    text-decoration: none;
+    color: aqua;
+  }
+li{
+ list-style: none;
+}
+
+summary{
+    outline: none;
+}
+   
+.section_left{
+    width: 20%;
+    max-width: 200%;
+}
+.mainbody{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    padding-top: 1.3%;
+    margin-top: 120px;
+}
+.left_body{
+    width: 40%;
+    max-width: 100%;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.pictures{
+    justify-content: center; 
+    width: 100%;
+    height: 100%;
+}
+.right_body{
+    width: 40%;
+    max-width: 100%;
+    margin-right: 2rem;  
+
+}
+.color li{
+   display: inline; 
+   border-bottom: transparent;
+}
+.color button{
+    border-radius: 50%;
+    height: 1.7em;
+    border-width: 0.1em;
+    margin-top: 0.25em;
+    width: 1em;
+    
+} 
+.color button:hover{
+   border-color: whitesmoke ; 
+   min-width: 1em;
+   
+}
+.direction{
+    max-width: 100%;
+    margin-left: 45%;
+}
+.star_checked{
+    color: orange;
+}
+.products a{
+    color:black;
+    font-size: 2em;
+    text-align: right;
+
+}
+.products a :hover{
+    color:gray;
+    font-size: 1.5em;
+}
+table .fa {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+.btnadd button:hover{
+  background-color: white;
+}
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    
+    width: 100%;
+    height:100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+/*Sa footer*/
+footer {
+  color: var(--green);
+  height: 70vh;
+  padding: 80px 0 80px 0;
+  text-align: center;
+  background-color: var(--light-text);
+}
+
+input[type=email] {
+  background: inherit;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid var(--green);
+}
+
+.email-submit {
+  padding: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+button:hover {
+  color: var(--blue);
+}
+
+.footer-nav-columns {
+  padding: 50px 25% 50px 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-nav-columns div ul {
+  list-style-type: none;
+}
+
+.footer-nav-columns div a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+.footer-nav-columns div a:hover {
+  color: var(--blue);
+}
+
+.bottom-info {
+  display: block;
+  background: var(--light-text);
+  margin: 15px 0 15px 0;
+}
+/*Sa footer end*/
+.li button:focus{
+	outline: none;
+}
