@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap" rel="stylesheet">
 <meta name="cystack-verification" content="0d0c4cca7085d3f63876d45e1d38f34c"/>
+<meta name="apptrana" content="09b8fd9fd9a247c083eea6cfe1e9498a">
 </head>
 <body>
 <script>
