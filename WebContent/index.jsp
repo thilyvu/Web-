@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Playfair+Display&family=Rozha+One&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap" rel="stylesheet">
+<meta name="cystack-verification" content="0d0c4cca7085d3f63876d45e1d38f34c"/>
 </head>
 <body>
 <script>
