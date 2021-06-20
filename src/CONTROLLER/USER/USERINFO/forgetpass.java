@@ -22,24 +22,16 @@ public class forgetpass extends HttpServlet {
   @Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			public static boolean isValidEmail(String email) {
-				String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-				return email.matches(regex);
+				String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                            "[a-zA-Z0-9_+&*-]+)*@" +
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                            "A-Z]{2,7}$";
+                              
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
 		}
-		// public int getSpecialCharacterCount(String s) {
-		// 	if (s == null || s.trim().isEmpty()) {
-		// 			System.out.println("Incorrect format of string");
-		// 			return 0;
-		// 	}
-		// 	Pattern p = Pattern.compile("^(\s|\w|\d|<br>|<ul>|<\ul>)*?$");
-		// 	Matcher m = p.matcher(s);
-		//  // boolean b = m.matches();
-		// 	boolean b = m.find();
-		// 	if (b)
-		// 		 System.out.println("There is a special character in my string ");
-		// 	else
-		// 			System.out.println("There is no special char.");
-		// 	return 0;
-		// }
 		try
 		{
 			String email=req.getParameter("email");

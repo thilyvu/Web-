@@ -45,8 +45,15 @@ public class LoginServlet extends HttpServlet {
     	HttpSession session=request.getSession();
     	String url = "/login/login.jsp";
 			public static boolean isValidEmail(String email) {
-					String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-					return email.matches(regex);
+				String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                            "[a-zA-Z0-9_+&*-]+)*@" +
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                            "A-Z]{2,7}$";
+                              
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
 			}
     	try
     	{
