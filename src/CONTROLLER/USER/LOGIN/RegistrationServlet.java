@@ -34,28 +34,13 @@ public class RegistrationServlet extends HttpServlet {
 				String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 				return email.matches(regex);
 		}
-			public int getSpecialCharacterCount(String s) {
-				if (s == null || s.trim().isEmpty()) {
-						System.out.println("Incorrect format of string");
-						return 0;
-				}
-				Pattern p = Pattern.compile("^(\s|\w|\d|<br>|<ul>|<\ul>)*?$");
-				Matcher m = p.matcher(s);
-			 // boolean b = m.matches();
-				boolean b = m.find();
-				if (b)
-					 System.out.println("There is a special character in my string ");
-				else
-						System.out.println("There is no special char.");
-				return 0;
-		}
 			try
    		{
    			String email = request.getParameter("email");
    			String phone = request.getParameter("phone");
    			String password = request.getParameter("mk");
    			String password1 = request.getParameter("mk1");
-   			if (isValidEmail(email)&& isPhoneValid(phone)&& getSpecialCharacterCount(email)==0 && getSpecialCharacterCount(phone)==0)
+   			if (isValidEmail(email)&& isPhoneValid(phone))
 				 {
 					if(!password.equals(password1))
 					{

@@ -25,27 +25,27 @@ public class forgetpass extends HttpServlet {
 				String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 				return email.matches(regex);
 		}
-		public int getSpecialCharacterCount(String s) {
-			if (s == null || s.trim().isEmpty()) {
-					System.out.println("Incorrect format of string");
-					return 0;
-			}
-			Pattern p = Pattern.compile("^(\s|\w|\d|<br>|<ul>|<\ul>)*?$");
-			Matcher m = p.matcher(s);
-		 // boolean b = m.matches();
-			boolean b = m.find();
-			if (b)
-				 System.out.println("There is a special character in my string ");
-			else
-					System.out.println("There is no special char.");
-			return 0;
-		}
+		// public int getSpecialCharacterCount(String s) {
+		// 	if (s == null || s.trim().isEmpty()) {
+		// 			System.out.println("Incorrect format of string");
+		// 			return 0;
+		// 	}
+		// 	Pattern p = Pattern.compile("^(\s|\w|\d|<br>|<ul>|<\ul>)*?$");
+		// 	Matcher m = p.matcher(s);
+		//  // boolean b = m.matches();
+		// 	boolean b = m.find();
+		// 	if (b)
+		// 		 System.out.println("There is a special character in my string ");
+		// 	else
+		// 			System.out.println("There is no special char.");
+		// 	return 0;
+		// }
 		try
 		{
 			String email=req.getParameter("email");
 			if(email!=null && email!="")
 			{
-				if( isValidEmail(email) && getSpecialCharacterCount(email)==0)
+				if( isValidEmail(email) )
 				{
 					User u=Cuser.getUser(email);
 					String body="Gửi "+u.getTenhienthi();
