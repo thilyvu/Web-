@@ -22,7 +22,7 @@ public class forgetpass extends HttpServlet {
 		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
 		Pattern pat = Pattern.compile(regex);
 		return pat.matcher(email).find();
-	};
+	}
   @Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
