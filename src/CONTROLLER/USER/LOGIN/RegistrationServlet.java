@@ -31,10 +31,14 @@ public class RegistrationServlet extends HttpServlet {
 				return s.matches(regex);
 			}
 			public static boolean isValidEmail(String email) {
-        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
-        Pattern pat = Pattern.compile(regex);
-        return pat.matcher(email).find();
-			}
+				String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
+				Pattern pat = Pattern.compile(regex);
+				// String email="1234";
+				// String emailString="Songok@gmail.com";
+				// System.out.println(email+"---->"+pat.matcher(email).find());
+				// System.out.println(emailString+"---->"+pat.matcher(emailString).find());
+				return pat.matcher(email).find();
+			};
 			try
    		{
    			String email = request.getParameter("email");
