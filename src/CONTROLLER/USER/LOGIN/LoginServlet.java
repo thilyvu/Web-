@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
      */
     public LoginServlet() {
         super();
-        // TODO Auto-generated constructor stub
+        // TODO Auto-generated	 constructor stub
     }
 		public static boolean isValidEmail(String email) {
 			String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
