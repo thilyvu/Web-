@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
 			public static boolean isValidEmail(String email) {
         String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
         Pattern pat = Pattern.compile(regex);
-        return pat.matcher(email).matches();
+        return pat.matcher(email).matches().find();
 			}
     	try
     	{
