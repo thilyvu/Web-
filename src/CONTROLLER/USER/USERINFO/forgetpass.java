@@ -24,7 +24,7 @@ public class forgetpass extends HttpServlet {
 		public static boolean isValidEmail(String email) {
 			String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
 			Pattern pat = Pattern.compile(regex);
-			return pat.matcher(email).matches().find();
+			return pat.matcher(email).find();
 		}
 		try
 		{
