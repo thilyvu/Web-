@@ -18,28 +18,28 @@ import Mail.SSLEmail;
 @WebServlet("/forgetpass")
 public class forgetpass extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	public static boolean isValidEmail(String email) {
+		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
+		Pattern pat = Pattern.compile(regex);
+		return pat.matcher(email).find();
+	}
   @Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 		try
 		{
 			String email=req.getParameter("email");
 			if(email!=null && email!="")
 			{
-				if( isValidEmail(email) )
-				{
-					User u=Cuser.getUser(email);
-					String body="Gửi "+u.getTenhienthi();
-					body+="<br> Bạn vửa tiến hành quên mật khẩu";
-					body+="<br> Mật khẩu của bạn là: "+u.getPass();
-					body+="<br> Mọi thắc mắc vui lòng liên hệ songoku2505@gmail.com";
-					SSLEmail.sendmail(u.getEmail(), "Quên mật khẩu", body);
-					req.setAttribute("mail", "Chúng tôi vừa gửi mật khẩu của bạn vào email mà bạn đăng kí");
+				if(isValidEmail(email)){
+				User u=Cuser.getUser(email);
+				String body="Gửi "+u.getTenhienthi();
+				body+="<br> Bạn vửa tiến hành quên mật khẩu";
+				body+="<br> Mật khẩu của bạn là: "+u.getPass();
+				body+="<br> Mọi thắc mắc vui lòng liên hệ songoku2505@gmail.com";
+				SSLEmail.sendmail(u.getEmail(), "Quên mật khẩu", body);
+				req.setAttribute("mail", "Chúng tôi vừa gửi mật khẩu của bạn vào email mà bạn đăng kí");
 				}
-				else{
-					req.setAttribute("mail", "Email của bạn sai định dạng vui lòng kiểm tra lại");
-				}
-			
 			}
 		}
 		catch (Exception e) {
