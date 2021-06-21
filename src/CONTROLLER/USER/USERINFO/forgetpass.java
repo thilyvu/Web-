@@ -18,18 +18,14 @@ import Mail.SSLEmail;
 @WebServlet("/forgetpass")
 public class forgetpass extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	public static boolean isValidEmail(String email) {
+		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
+		Pattern pat = Pattern.compile(regex);
+		return pat.matcher(email).find();
+	};
   @Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		public static boolean isValidEmail(String email) {
-			String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
-			Pattern pat = Pattern.compile(regex);
-			// String email="1234";
-			// String emailString="Songok@gmail.com";
-			// System.out.println(email+"---->"+pat.matcher(email).find());
-			// System.out.println(emailString+"---->"+pat.matcher(emailString).find());
-			return pat.matcher(email).find();
-		};
+
 		try
 		{
 			String email=req.getParameter("email");

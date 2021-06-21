@@ -23,22 +23,19 @@ import Mail.SSLEmail;
  */
 @WebServlet("/RegistrationServlet")
 public class RegistrationServlet extends HttpServlet {
+	public static boolean isValidEmail(String email) {
+		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
+		Pattern pat = Pattern.compile(regex);
+		return pat.matcher(email).find();
+	}
+	private static boolean isPhoneValid(String s) {
+		String regex = "/(84|0[3|5|7|8|9])+([0-9]{8})\b"; 
+		return s.matches(regex);
+	}
 	private static final long serialVersionUID = 1L;
        @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			private static boolean isPhoneValid(String s) {
-				String regex = "/(84|0[3|5|7|8|9])+([0-9]{8})\b"; // XXX-XXX-XXXX
-				return s.matches(regex);
-			}
-			public static boolean isValidEmail(String email) {
-				String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
-				Pattern pat = Pattern.compile(regex);
-				// String email="1234";
-				// String emailString="Songok@gmail.com";
-				// System.out.println(email+"---->"+pat.matcher(email).find());
-				// System.out.println(emailString+"---->"+pat.matcher(emailString).find());
-				return pat.matcher(email).find();
-			};
+
 			try
    		{
    			String email = request.getParameter("email");

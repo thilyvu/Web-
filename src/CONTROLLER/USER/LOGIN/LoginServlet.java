@@ -33,6 +33,11 @@ public class LoginServlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
+		public static boolean isValidEmail(String email) {
+			String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
+			Pattern pat = Pattern.compile(regex);
+			return pat.matcher(email).find();
+		}
     boolean pat(String mau,String vanban)
    	{
    		Pattern pattern = Pattern.compile(mau);
@@ -44,15 +49,6 @@ public class LoginServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	HttpSession session=request.getSession();
     	String url = "/login/login.jsp";
-			public static boolean isValidEmail(String email) {
-				String regex = "^[A-Za-z0-9+_.-]+@(.+)$";                           
-				Pattern pat = Pattern.compile(regex);
-				// String email="1234";
-				// String emailString="Songok@gmail.com";
-				// System.out.println(email+"---->"+pat.matcher(email).find());
-				// System.out.println(emailString+"---->"+pat.matcher(emailString).find());
-				return pat.matcher(email).find();
-			};
     	try
     	{
 	    	//parameter from jsp
